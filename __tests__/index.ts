@@ -13,7 +13,7 @@ describe('MessageRPC', () => {
         },
     };
 
-    it('should pass the message to receiver', () => {
+    it('should  pass the message to receiver', () => {
         let counter = 0;
         const rpc = new MessageRPC<{ count: () => void }>({
             count: (): number => counter++,
