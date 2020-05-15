@@ -19,13 +19,18 @@
 * [MessageReceiver](_index_.md#messagereceiver)
 * [MessageSender](_index_.md#messagesender)
 
+### Variables
+
+* [objectHash](_index_.md#const-objecthash)
+* [stringHash](_index_.md#const-stringhash)
+
 ## Type aliases
 
 ###  MessageRPCDef
 
 Ƭ **MessageRPCDef**: *Record‹string | number | symbol, function›*
 
-*Defined in [index.ts:14](https://github.com/srolel/message-rpc/blob/b446f0c/src/index.ts#L14)*
+*Defined in [index.ts:13](https://github.com/srolel/message-rpc/blob/362aab8/src/index.ts#L13)*
 
 ___
 
@@ -33,7 +38,7 @@ ___
 
 Ƭ **MessageRPCDefWithContext**: *object*
 
-*Defined in [index.ts:16](https://github.com/srolel/message-rpc/blob/b446f0c/src/index.ts#L16)*
+*Defined in [index.ts:15](https://github.com/srolel/message-rpc/blob/362aab8/src/index.ts#L15)*
 
 #### Type declaration:
 
@@ -43,7 +48,7 @@ ___
 
 Ƭ **MessageRPCMessage**: *object*
 
-*Defined in [index.ts:7](https://github.com/srolel/message-rpc/blob/b446f0c/src/index.ts#L7)*
+*Defined in [index.ts:6](https://github.com/srolel/message-rpc/blob/362aab8/src/index.ts#L6)*
 
 #### Type declaration:
 
@@ -61,7 +66,7 @@ ___
 
 Ƭ **MessageRPCMethodContext**: *object*
 
-*Defined in [index.ts:5](https://github.com/srolel/message-rpc/blob/b446f0c/src/index.ts#L5)*
+*Defined in [index.ts:4](https://github.com/srolel/message-rpc/blob/362aab8/src/index.ts#L4)*
 
 #### Type declaration:
 
@@ -73,7 +78,7 @@ ___
 
 Ƭ **MessageRPCOptions**: *object*
 
-*Defined in [index.ts:34](https://github.com/srolel/message-rpc/blob/b446f0c/src/index.ts#L34)*
+*Defined in [index.ts:33](https://github.com/srolel/message-rpc/blob/362aab8/src/index.ts#L33)*
 
 #### Type declaration:
 
@@ -85,7 +90,7 @@ ___
 
 Ƭ **MessageRPCTag**: *string | number*
 
-*Defined in [index.ts:32](https://github.com/srolel/message-rpc/blob/b446f0c/src/index.ts#L32)*
+*Defined in [index.ts:31](https://github.com/srolel/message-rpc/blob/362aab8/src/index.ts#L31)*
 
 ___
 
@@ -93,7 +98,7 @@ ___
 
 Ƭ **MessageReceiver**: *object*
 
-*Defined in [index.ts:28](https://github.com/srolel/message-rpc/blob/b446f0c/src/index.ts#L28)*
+*Defined in [index.ts:27](https://github.com/srolel/message-rpc/blob/362aab8/src/index.ts#L27)*
 
 #### Type declaration:
 
@@ -105,10 +110,26 @@ ___
 
 Ƭ **MessageSender**: *object*
 
-*Defined in [index.ts:23](https://github.com/srolel/message-rpc/blob/b446f0c/src/index.ts#L23)*
+*Defined in [index.ts:22](https://github.com/srolel/message-rpc/blob/362aab8/src/index.ts#L22)*
 
 #### Type declaration:
 
 * **id**? : *undefined | number*
 
 * **send**(`message`: any): *any*
+
+## Variables
+
+### `Const` objectHash
+
+• **objectHash**: *any* = require('object-hash')
+
+*Defined in [index.ts:2](https://github.com/srolel/message-rpc/blob/362aab8/src/index.ts#L2)*
+
+___
+
+### `Const` stringHash
+
+• **stringHash**: *any* = require('string-hash')
+
+*Defined in [index.ts:1](https://github.com/srolel/message-rpc/blob/362aab8/src/index.ts#L1)*

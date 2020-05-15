@@ -9,14 +9,14 @@ describe('MessageRPC', () => {
     };
     const sender: MessageSender = {
         send(message) {
-            listeners.forEach((fn) => fn(message));
+            listeners.forEach(fn => fn(message));
         },
     };
 
     it('should pass the message to receiver', () => {
         let counter = 0;
         const rpc = new MessageRPC<{ count: () => void }>({
-            count: () => counter++,
+            count: (): number => counter++,
         });
 
         rpc.register(reciever);

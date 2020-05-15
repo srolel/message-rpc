@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import stringHash from 'string-hash';
-import objectHash from 'object-hash';
+const stringHash = require('string-hash');
+const objectHash = require('object-hash');
 
 type MessageRPCMethodContext = { id?: number };
 
