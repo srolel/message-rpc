@@ -4,7 +4,7 @@
 
 # message-rpc
 
-A type-safe, convenient RPC wrapper around node.js message passing. Based on a minimal EventEmitter-like interface, and mainly intended for use with the native cluster module.
+A small, type-safe, convenient RPC wrapper around node.js message passing. Based on a minimal EventEmitter-like interface, and mainly intended for use with the native cluster module.
 
 Requires Node.js >= 6.0.0
 
