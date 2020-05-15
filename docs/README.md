@@ -2,9 +2,13 @@
 
 # message-rpc
 
+![License](https://img.shields.io/github/license/srolel/message-rpc)
+![Build](https://img.shields.io/github/workflow/status/srolel/message-rpc/CI/master)
+![Coverage](https://img.shields.io/codecov/c/github/srolel/message-rpc)
+
 # message-rpc
 
-A type-safe, convenient RPC wrapper around node.js message passing. Based on a minimal EventEmitter-like interface, and mainly intended for use with the native cluster module.
+A small, type-safe, convenient RPC wrapper around node.js message passing. Based on a minimal EventEmitter-like interface, and mainly intended for use with the native cluster module.
 
 Requires Node.js >= 6.0.0
 
