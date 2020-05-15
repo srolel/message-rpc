@@ -10,11 +10,12 @@ Requires Node.js >= 6.0.0
 
 [docs](/docs/globals.md)
 
-## Examples
+## Usage through Examples
 
 ### Worker to master
 
 ```typescript
+// Define a type with methods used for passing messages
 type Eventing = {
   response2xx(): void;
   response4xx(): void;
@@ -24,6 +25,7 @@ type Eventing = {
 const eventingRPC = new MessageRPC<Eventing>({
   // Can implement any methods during instantiation or later (or never!)
   response5xx(reason: string): void {
+    // context has an id property with a worker's id (or undefined if it's the master node)
     console.log(`Worker ${this.id} returned a 5xx response: ${reason}`);
   },
 });
