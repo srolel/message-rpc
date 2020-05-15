@@ -1,4 +1,4 @@
-[message-rpc](../globals.md) › ["index"](../modules/_index_.md) › [MessageRPC](_index_.messagerpc.md)
+[message-rpc](../README.md) › [Globals](../globals.md) › ["index"](../modules/_index_.md) › [MessageRPC](_index_.messagerpc.md)
 
 # Class: MessageRPC <**T**>
 
@@ -35,7 +35,7 @@
 
 \+ **new MessageRPC**(`definition`: Partial‹[MessageRPCDefWithContext](../modules/_index_.md#messagerpcdefwithcontext)‹T››, `options`: [MessageRPCOptions](../modules/_index_.md#messagerpcoptions)): *[MessageRPC](_index_.messagerpc.md)*
 
-*Defined in [index.ts:39](https://github.com/srolel/message-rpc/blob/92ac1a9/src/index.ts#L39)*
+*Defined in [index.ts:39](https://github.com/srolel/message-rpc/blob/b446f0c/src/index.ts#L39)*
 
 **Parameters:**
 
@@ -52,7 +52,7 @@ Name | Type | Default |
 
 • **definition**: *Partial‹[MessageRPCDefWithContext](../modules/_index_.md#messagerpcdefwithcontext)‹T››*
 
-*Defined in [index.ts:42](https://github.com/srolel/message-rpc/blob/92ac1a9/src/index.ts#L42)*
+*Defined in [index.ts:42](https://github.com/srolel/message-rpc/blob/b446f0c/src/index.ts#L42)*
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 • **tag**: *[MessageRPCTag](../modules/_index_.md#messagerpctag)* = "__default_tag__"
 
-*Defined in [index.ts:39](https://github.com/srolel/message-rpc/blob/92ac1a9/src/index.ts#L39)*
+*Defined in [index.ts:39](https://github.com/srolel/message-rpc/blob/b446f0c/src/index.ts#L39)*
 
 ## Methods
 
@@ -68,7 +68,7 @@ ___
 
 ▸ **client**(`sender`: [MessageSender](../modules/_index_.md#messagesender)): *T*
 
-*Defined in [index.ts:105](https://github.com/srolel/message-rpc/blob/92ac1a9/src/index.ts#L105)*
+*Defined in [index.ts:105](https://github.com/srolel/message-rpc/blob/b446f0c/src/index.ts#L105)*
 
 Get a client, using a provided sender. The global process object is used by default.
 
@@ -86,7 +86,7 @@ ___
 
 ▸ **config**(`options`: [MessageRPCOptions](../modules/_index_.md#messagerpcoptions)): *this*
 
-*Defined in [index.ts:70](https://github.com/srolel/message-rpc/blob/92ac1a9/src/index.ts#L70)*
+*Defined in [index.ts:70](https://github.com/srolel/message-rpc/blob/b446f0c/src/index.ts#L70)*
 
 **Parameters:**
 
@@ -102,7 +102,7 @@ ___
 
 ▸ **extend**(`extension`: Partial‹[MessageRPCDefWithContext](../modules/_index_.md#messagerpcdefwithcontext)‹T››): *this*
 
-*Defined in [index.ts:80](https://github.com/srolel/message-rpc/blob/92ac1a9/src/index.ts#L80)*
+*Defined in [index.ts:80](https://github.com/srolel/message-rpc/blob/b446f0c/src/index.ts#L80)*
 
 RPC interface methods can be implemented later. This is useful, for example,
 for implementations that depend on the master node in the cluster.
@@ -121,7 +121,7 @@ ___
 
 ▸ **generateTag**(`options`: [MessageRPCOptions](../modules/_index_.md#messagerpcoptions)): *[MessageRPCTag](../modules/_index_.md#messagerpctag)*
 
-*Defined in [index.ts:55](https://github.com/srolel/message-rpc/blob/92ac1a9/src/index.ts#L55)*
+*Defined in [index.ts:55](https://github.com/srolel/message-rpc/blob/b446f0c/src/index.ts#L55)*
 
 Generates a tag (identifier) for the RPC interface. This is needed for it
 to work across different processes. It can be provided with the options object,
@@ -142,7 +142,7 @@ ___
 
 ▸ **register**(`receiver`: [MessageReceiver](../modules/_index_.md#messagereceiver)): *this*
 
-*Defined in [index.ts:89](https://github.com/srolel/message-rpc/blob/92ac1a9/src/index.ts#L89)*
+*Defined in [index.ts:89](https://github.com/srolel/message-rpc/blob/b446f0c/src/index.ts#L89)*
 
 Register an RPC message receiver. The global process object is used by default.
 

@@ -1,6 +1,6 @@
 {
     "name": "message-rpc",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A small utility to wrap node.js message passing with an RPC interface",
     "main": "build/index.js",
     "types": "build/index.d.ts",
@@ -13,7 +13,7 @@
         "build:watch": "tsc -w -p tsconfig.release.json",
         "lint": "eslint . --ext .ts,.tsx"
     },
-    "author": "Sharon (Sean)",
+    "author": "Sharon (Sean) Rolel",
     "license": "MIT",
     "dependencies": {
         "object-hash": "^2.0.3",

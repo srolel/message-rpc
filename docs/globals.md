@@ -1,4 +1,4 @@
-[message-rpc](globals.md)
+[message-rpc](README.md) › [Globals](globals.md)
 
 # message-rpc
 
