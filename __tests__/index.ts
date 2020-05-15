@@ -104,4 +104,16 @@ describe('MessageRPC', () => {
 
         expect(counter).toEqual(1);
     });
+
+    it('method not implemented', () => {
+        const counter = 0;
+        const rpc = new MessageRPC<{ count: () => void }>();
+
+        rpc.register(reciever);
+        const client = rpc.client(sender);
+
+        client.count();
+
+        expect(counter).toEqual(0);
+    });
 });
