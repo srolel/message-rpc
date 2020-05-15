@@ -45,6 +45,13 @@ export class MessageRPC<T extends MessageRPCDef> {
         this.config(options);
     }
 
+    /**
+     * Generates a tag (identifier) for the RPC interface. This is needed for it
+     * to work across different processes. It can be provided with the options object,
+     * otherwise it is inferred by where the RPC was instantiated or a hash of the
+     * RPC definition object if provided.
+     * @param options
+     */
     private generateTag(options: MessageRPCOptions): MessageRPCTag {
         const error = new Error();
         if (options.tag) {
@@ -65,12 +72,21 @@ export class MessageRPC<T extends MessageRPCDef> {
         return this;
     }
 
+    /**
+     * RPC interface methods can be implemented later. This is useful, for example,
+     * for implementations that depend on the master node in the cluster.
+     * @param extension
+     */
     extend(extension: Partial<MessageRPCDefWithContext<T>>): this {
         this.definition = { ...this.definition, ...extension };
         return this;
     }
 
-    register(receiver: MessageReceiver): this {
+    /**
+     * Register an RPC message receiver. The global process object is used by default.
+     * @param receiver
+     */
+    register(receiver: MessageReceiver = process): this {
         receiver.on('message', (message: MessageRPCMessage<T>) => {
             if (message && message.tag === this.tag) {
                 const method = Reflect.get(this.definition, message.method);
@@ -82,6 +98,10 @@ export class MessageRPC<T extends MessageRPCDef> {
         return this;
     }
 
+    /**
+     * Get a client, using a provided sender. The global process object is used by default.
+     * @param sender
+     */
     client(sender: MessageSender = process): T {
         return new Proxy({} as T, {
             get: (obj, prop): ((...args: any[]) => void) => {
