@@ -25,7 +25,7 @@ type Eventing = {
 const eventingRPC = new MessageRPC<Eventing>({
   // Can implement any methods during instantiation or later (or never!)
   response5xx(reason: string): void {
-    // context has an id property with a worker's id (or undefined if it's the master node)
+    // Context has an id property with a worker's id (or undefined if it's the master node)
     console.log(`Worker ${this.id} returned a 5xx response: ${reason}`);
   },
 });
