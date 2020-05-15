@@ -14,11 +14,12 @@ Requires Node.js >= 6.0.0
 
 [docs](/docs/globals.md)
 
-## Examples
+## Usage through Examples
 
 ### Worker to master
 
 ```typescript
+// Define a type with methods used for passing messages
 type Eventing = {
   response2xx(): void;
   response4xx(): void;
@@ -28,11 +29,13 @@ type Eventing = {
 const eventingRPC = new MessageRPC<Eventing>({
   // Can implement any methods during instantiation or later (or never!)
   response5xx(reason: string): void {
+    // Context has an id property with a worker's id (or undefined if the message came from the master node)
     console.log(`Worker ${this.id} returned a 5xx response: ${reason}`);
   },
 });
 
 if (cluster.isMaster) {
+  // Implement a method anywhere
   eventingRPC.extend({
     response2xx(): void {
       console.log(`Worker ${this.id} returned a 2xx response!`);
@@ -50,6 +53,7 @@ if (cluster.isMaster) {
 
   app.use((err, req, res, next) => {
     if (err) {
+      // Arguments passed to the master node
       eventingRPC.response5xx(err.message);
       res.sendStatus(500);
     } else {
