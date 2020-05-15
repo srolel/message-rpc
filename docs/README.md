@@ -12,7 +12,7 @@ A small, type-safe, convenient RPC wrapper around node.js message passing. Based
 
 Requires Node.js >= 6.0.0
 
-[docs](docs/globals.md)
+[docs](/docs/globals.md)
 
 ## Examples
 
