@@ -83,6 +83,7 @@ export class MessageRPC<T extends MessageRPCDef> {
 
     /**
      * Register an RPC message receiver. The global process object is used by default.
+     *
      * @param receiver
      */
     register(receiver: MessageReceiver = process): this {
