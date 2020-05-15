@@ -31,6 +31,7 @@ const eventingRPC = new MessageRPC<Eventing>({
 });
 
 if (cluster.isMaster) {
+  // Implement a method anywhere
   eventingRPC.extend({
     response2xx(): void {
       console.log(`Worker ${this.id} returned a 2xx response!`);
@@ -48,6 +49,7 @@ if (cluster.isMaster) {
 
   app.use((err, req, res, next) => {
     if (err) {
+      // Arguments passed to the master node
       eventingRPC.response5xx(err.message);
       res.sendStatus(500);
     } else {
