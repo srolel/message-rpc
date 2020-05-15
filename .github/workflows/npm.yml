@@ -21,6 +21,20 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm install
       - run: npm test  
+  update-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm install
+      - run: npm run docs  
+      - run: |
+        git config --global user.name 'Sharon (Sean) Rolel'
+        git config --global user.email 'srolel@users.noreply.github.com'
+        git commit -am "Automatic docs update"
+        git push
   publish:
     needs: test
     runs-on: ubuntu-latest
