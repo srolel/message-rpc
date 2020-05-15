@@ -1,6 +1,7 @@
 ![License](https://img.shields.io/github/license/srolel/message-rpc)
 ![Build](https://img.shields.io/github/workflow/status/srolel/message-rpc/CI/master)
 ![Coverage](https://img.shields.io/codecov/c/github/srolel/message-rpc)
+![Package](https://img.shields.io/npm/v/message-rpc)
 
 # message-rpc
 
