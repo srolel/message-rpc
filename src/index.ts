@@ -101,6 +101,6 @@ export class MessageRPC<T extends MessageRPCDef> {
                 }
                 return Reflect.get(obj, prop);
             },
-        }) as T;
+        });
     }
 }
