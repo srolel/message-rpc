@@ -4,6 +4,11 @@
     "description": "A small utility to wrap node.js message passing with an RPC interface",
     "main": "build/index.js",
     "types": "build/index.d.ts",
+    "keywords": [
+        "node",
+        "cluster",
+        "rpc"
+    ],
     "scripts": {
         "build": "tsc -p tsconfig.release.json",
         "docs": "typedoc --out docs --plugin typedoc-plugin-markdown src",
