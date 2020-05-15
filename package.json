@@ -1,6 +1,6 @@
 {
     "name": "message-rpc",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "A small utility to wrap node.js message passing with an RPC interface",
     "main": "build/index.js",
     "types": "build/index.d.ts",
