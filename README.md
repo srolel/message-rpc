@@ -16,6 +16,8 @@ Requires Node.js >= 6.0.0
 ### Worker to master
 
 ```typescript
+import { MessageRPC } from 'message-rpc';
+
 // Define a type with methods used for passing messages
 type Eventing = {
   response2xx(): void;
@@ -66,6 +68,8 @@ if (cluster.isMaster) {
 ### Master to worker
 
 ```typescript
+import { MessageRPC } from 'message-rpc';
+
 type Eventing = {
   processMessage(message: string): void;
 };
